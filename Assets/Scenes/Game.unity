@@ -958,7 +958,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -74, y: 309}
+  m_AnchoredPosition: {x: -74.00006, y: 309}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &395832607
@@ -1012,6 +1012,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 404925766}
+  - component: {fileID: 404925767}
   m_Layer: 0
   m_Name: Field
   m_TagString: Untagged
@@ -1038,6 +1039,21 @@ Transform:
   - {fileID: 850188019}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &404925767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404925765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fef776ab5aa2ff94793a966951c4976b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player1Score: {fileID: 395832605}
+  Player2Score: {fileID: 622585476}
+  goalToWin: 5
 --- !u!1 &432536861
 GameObject:
   m_ObjectHideFlags: 0
@@ -1841,7 +1857,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ballSpeed: 400
-  speedIncrement: 50
+  speedIncrement: 100
   MaxSpeedIncrement: 1000
 --- !u!114 &850188026
 MonoBehaviour:
@@ -1856,6 +1872,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ballmove: {fileID: 850188025}
+  scoreController: {fileID: 404925767}
 --- !u!1 &912983893
 GameObject:
   m_ObjectHideFlags: 0

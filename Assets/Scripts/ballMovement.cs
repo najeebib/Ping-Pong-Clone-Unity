@@ -13,8 +13,17 @@ public class ballMovement : MonoBehaviour
     {
         StartCoroutine(StartBall());
     }
+    public void positionBall(bool isStratingPlayer1)
+    {
+        this.GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
+        if(isStratingPlayer1 )
+            this.gameObject.transform.localPosition = new Vector3 (-100,0,0);
+        else
+            this.gameObject.transform.localPosition = new Vector3(100, 0, 0);
+    }
     public IEnumerator StartBall(bool isStartingPlayer1 = true)
     {
+        this.positionBall(isStartingPlayer1);
         this.hitCount = 0;
         yield return new WaitForSeconds(2);
         if(isStartingPlayer1 )
@@ -37,7 +46,6 @@ public class ballMovement : MonoBehaviour
     public void IncreaseHitCount()
     {
         if (this.hitCount * this.speedIncrement <= this.MaxSpeedIncrement)
-            this.hitCount++;
-        
+            this.hitCount++;        
     }
 }
