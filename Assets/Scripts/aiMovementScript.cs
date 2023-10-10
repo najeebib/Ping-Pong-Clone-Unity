@@ -9,6 +9,7 @@ public class aiMovementScript : MonoBehaviour
 
     private void FixedUpdate()
     {
+        //move the player 2 towards the ball
         if(Mathf.Abs(this.transform.position.y - ball.transform.position.y) > 50)
         {
             if(transform.position.y < ball.transform.position.y)

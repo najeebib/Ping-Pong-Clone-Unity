@@ -9,6 +9,7 @@ public class soundControler : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        //play sounds when ball collides
         if(collision.gameObject.name == "Player1" || collision.gameObject.name == "Player2")
             this.racketSound.Play();
         else

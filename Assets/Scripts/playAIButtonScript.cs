@@ -7,6 +7,7 @@ public class playAIButtonScript : MonoBehaviour
 {
     public void PlayGame()
     {
+        //load the game against ai scene
         SceneManager.LoadScene(3);
     }
 }

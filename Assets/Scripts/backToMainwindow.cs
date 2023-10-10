@@ -8,6 +8,7 @@ public class backToMainwindow : MonoBehaviour
     // Start is called before the first frame update
     public void PlayGame()
     {
+        //load the main menus
         SceneManager.LoadScene(0);
     }
 }

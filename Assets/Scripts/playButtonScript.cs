@@ -7,6 +7,7 @@ public class playButtonScript : MonoBehaviour
 {
     public void PlayGame()
     {
+        //load the game scene
         SceneManager.LoadScene(1);
     }
 }

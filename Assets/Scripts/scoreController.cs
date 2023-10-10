@@ -15,17 +15,10 @@ public class scoreController : MonoBehaviour
     public GameObject Player2Score;
 
     public int goalToWin;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    
     void Update()
     {
-        
+        //check if either player scored enough goals
         if (this.scorePlayer1 >= this.goalToWin || this.scorePlayer2 >= this.goalToWin)
         {
             Text uiScorePlayer1 = this.Player1Score.GetComponent<Text>();
@@ -38,11 +31,13 @@ public class scoreController : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        //update score everytime either player scores
         Text uiScorePlayer1 = this.Player1Score.GetComponent<Text>();
         uiScorePlayer1.text = this.scorePlayer1.ToString();
         Text uiScorePlayer2 = this.Player2Score.GetComponent<Text>();
         uiScorePlayer2.text = this.scorePlayer2.ToString();
     }
+    //incerease playe score
     public void goalPlayer1()
     {
         this.scorePlayer1++;
